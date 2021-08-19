@@ -1,24 +1,13 @@
 import math
 
-a,b,c = input().split(',')
-a = int(a)
-if b!='':
-    b = int(b)
-    c = int(c)
-    tung = int(str(b)+str(c)) -  int(b)
-    harn = int('9'*len(str(c)) + '0'*len(str(b)))
-    tung += a * int(harn)
+a,b,c = [str(x) for x in input().split(',')]
 
-    gcd = math.gcd(tung,harn)
-
+# print(a,b,c)
+if b == '':
+    s = int(c)
+    h = int('9'*len(c))
+    s += int(a)*h
+    gcd=  math.gcd(s,h)
+    print(s//gcd,h//gcd,sep='/')
 else:
-    c = int(c)
-    tung = int(str(c))
-    harn = int('9'*len(str(c)))
-    tung += a * int(harn)
-
-    gcd = math.gcd(tung,harn)
-
-# tung //= gcd
-# harn //= gcd
-print(tung,harn,sep=" / ")
+    print(s//gcd,h//gcd,sep='/')
