@@ -1,20 +1,27 @@
-x = '101010101010111101010110101010101010101010101101010101010110'
-y = '001010101010101010101010101010101010101010101010101010101000'
-z = '000010101010101010101010101010101010101010101010101010100100'
-k = 5
-r = ['10101','01000']
-a = ""
+from pynput.keyboard import Key,Controller
+import time
+t = 2243
+keyboard = Controller()
+time.sleep(3)
+keyboard.type(f'fill -2133 62 {t} -2263 31 {t-4} air replace minecraft:kelp_plant')
+keyboard.press(Key.enter)
+keyboard.release(Key.enter)
 
-if x[i-(k//2):i+((k//2)+1)] in r:
-    a+='1'
-else:
-    a+='0'
-if x[2-(k//2):2+((k//2)+1)] in r:
-    a+='1'
-else:
-    a+='0'
-if x[3-(k//2):i+((k//2)+1)] in r:
-    a+='1'
-else:
-    a+='0'
+time.sleep(1)
+keyboard.type(f'fill -2133 62 {t} -2263 31 {t-4} air replace seagrass\n')
+keyboard.press(Key.enter)
+keyboard.release(Key.enter)
 
+time.sleep(1)
+keyboard.type(f'fill -2133 62 {t} -2263 31 {t-4} air replace tall_seagrass\n')
+keyboard.press(Key.enter)
+keyboard.release(Key.enter)
+
+time.sleep(1)
+keyboard.type(f'fill -2133 62 {t} -2263 31 {t-4} air replace water\n')
+keyboard.press(Key.enter)
+keyboard.release(Key.enter)
+
+t -= 4
+print('startting....')
+time.sleep(2)
